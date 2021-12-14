@@ -1,9 +1,12 @@
 import React from 'react'
+import Login from './Login'
+import Register from './Register'
 
 const MyAccount = () => {
        return (
-              <div className="sec__one">
-                     <h1> Mi cuenta </h1>
+              <div className="myAccount">
+              <div><Login /></div>
+              <div><Register /></div>
               </div>
        )
 }

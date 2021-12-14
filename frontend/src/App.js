@@ -7,6 +7,8 @@ import About from './components/MyAccount';
 import Contact from './components/Contact';
 
 import Navbarmenu from './components/menu/Navbarmenu';
+import Banner from './components/Banner';
+import MyAccount from './components/MyAccount';
 
 
 
@@ -28,7 +30,8 @@ function App() {
           
           </Routes>
       </Router>
-      
+      <Banner />
+      <MyAccount />
       
     </React.Fragment>
     
