@@ -1,32 +1,38 @@
-import React from "react";
-import { Header } from "./components/Header";
-// import logo from './logo.svg';
-// import './App.css';
-import { TodoCounter } from "./components/TodoCounter";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import './App.css';
 
-const todo = [
-  {text: 'Cortar cebolla', completed: false},
-  {text: 'Tomar Curso', completed: false},
-  {text: 'Llorar cebolla', completed: false}
-];
+import Home from './components/Home';
+import About from './components/MyAccount';
+import Contact from './components/Contact';
+
+import Navbarmenu from './components/menu/Navbarmenu';
+import Banner from './components/Banner';
+import MyAccount from './components/MyAccount';
+
+
+
 
 function App() {
   return (
     <React.Fragment>
-      {/* <TodoCounter /> */}
-      <Header />
-      {/* <TodoCounter />
-      <h2>Has completado 2 de 3 todos</h2>
+      
+      <Router basename="/">
 
-      <TodoSearch />
-      <input placeholder="Cebolla" />
-      <TodoList>
-        {todos.map(todo => (
-          <TodoItem />
-        ))}
-      </TodoList>
-      <CreateTodoButton />
-      <button></button> */}
+        {/* Add Menu Component */}
+        <Navbarmenu />
+        
+        <Routes>
+          <Route exact path="/" component={Home}/>
+          <Route path="/About" component={About}/>
+          <Route path="/Contact" component={Contact}/>
+
+          
+          </Routes>
+      </Router>
+      <Banner />
+      <MyAccount />
+      
     </React.Fragment>
     
     
