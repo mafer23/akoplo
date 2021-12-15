@@ -7,35 +7,46 @@ import About from './components/MyAccount';
 import Contact from './components/Contact';
 
 import Navbarmenu from './components/menu/Navbarmenu';
-import Banner from './components/Banner';
 import MyAccount from './components/MyAccount';
 
-
-
-
-function App() {
+const App = () => {
   return (
-    <React.Fragment>
-      
-      <Router basename="/">
-
-        {/* Add Menu Component */}
+    <Router>
+      <div>
         <Navbarmenu />
-        
         <Routes>
-          <Route exact path="/" component={Home}/>
-          <Route path="/About" component={About}/>
-          <Route path="/Contact" component={Contact}/>
-
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/myaccount" element={<MyAccount />} />
         </Routes>
-      </Router>
-      <Banner />
-      <MyAccount />
-      
-    </React.Fragment>
-    
-    
+      </div>
+    </Router>
   );
 }
+// function App() {
+//   return (
+//     <React.Fragment>
+      
+//       <Router basename="/">
+
+//         {/* Add Menu Component */}
+//         <Navbarmenu />
+        
+//         <Routes>
+//           <Route exact path="/" component={Home}/>
+//           <Route path="/About" component={About}/>
+//           <Route path="/Contact" component={Contact}/>
+
+//         </Routes>
+//       </Router>
+//       <Banner />
+//       <MyAccount />
+      
+//     </React.Fragment>
+    
+    
+//   );
+// }
 
 export default App;
