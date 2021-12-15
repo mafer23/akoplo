@@ -1,9 +1,20 @@
 const express = require('express');
-const router = express.Router();
+const UserService = require('./../services/user.service');
+const {updateUserSchema, createUserSchema,getUserSchema} = require('./../schemas/user.schema');
 
+const router = express.Router();
+const service = new UserService();
 
 router.get('/filter', (req, res) => {
   res.send('Yo soy un filter');
+});
+router.get('/', async (req, res, next) => {
+  try {
+    const users = await service.find();
+    res.json(users);
+  } catch (error) {
+    next(error);
+  }
 });
 
 router.get('/:id', (req, res) => {

@@ -12,7 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^2.0.15"
+    "@hapi/boom": "^9.1.4",
+    "joi": "^17.5.0",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1"
   },
   "devDependencies": {
     "eslint": "^8.4.1",
