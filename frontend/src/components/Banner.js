@@ -1,7 +1,6 @@
 import React from "react"
 import Botton from "./Botton"
 
-
 const Banner = () => {
        return (
               <div className="banner">
@@ -12,4 +11,4 @@ const Banner = () => {
        )
 }
 
-export default Banner
+export default Banner;

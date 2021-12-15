@@ -27,8 +27,7 @@ function App() {
           <Route path="/About" component={About}/>
           <Route path="/Contact" component={Contact}/>
 
-          
-          </Routes>
+        </Routes>
       </Router>
       <Banner />
       <MyAccount />

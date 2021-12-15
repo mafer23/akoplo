@@ -12,7 +12,7 @@ app.get('/nueva',(req,res) =>{
 
 
 app.listen(port, ()=>{
-  console.log('Mi port' + port);
+  console.log(`Escuchando en el puerto ${port}`);
 });
 
 
