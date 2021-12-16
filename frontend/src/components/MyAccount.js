@@ -1,12 +1,10 @@
 import React from 'react'
-import Login from './Login'
-import Register from './Register'
+import {Data2} from './charts/BarChart4'
 
 const MyAccount = () => {
        return (
               <div className="myAccount">
-              <div><Login /></div>
-              <div><Register /></div>
+              <Data2/>
               </div>
        )
 }
