@@ -1,9 +1,8 @@
 import React from 'react'
+import Banner from './Banner'
 const Home = () => {
 	return (
-        <div className="sec__one">
-			<h1> Home </h1>
-        </div>
+        <Banner/>
        )
 }
 export default Home

@@ -1,41 +1,35 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css';
-
 import Home from './components/Home';
-import About from './components/MyAccount';
 import Contact from './components/Contact';
-
 import Navbarmenu from './components/menu/Navbarmenu';
-import Banner from './components/Banner';
 import MyAccount from './components/MyAccount';
+import Register from './components/Register';
+// import Dashboard from './pages/Dashboard';
+import Footer from './components/Footer';
 
 
-
-
-function App() {
+const App = () => {
   return (
-    <React.Fragment>
-      
-      <Router basename="/">
-
-        {/* Add Menu Component */}
+    <Router>
+      <div>
         <Navbarmenu />
-        
         <Routes>
-          <Route exact path="/" component={Home}/>
-          <Route path="/About" component={About}/>
-          <Route path="/Contact" component={Contact}/>
-
+          <Route path="/" element={<Home />} />
+          <Route path="/myaccount" element={<MyAccount />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/contact" element={<Contact />} />
+          
         </Routes>
-      </Router>
-      <Banner />
-      <MyAccount />
-      
-    </React.Fragment>
-    
+        
+      </div>
+  
+      <Footer/>  
+ 
+    </Router>
     
   );
-}
+  }
 
 export default App;
