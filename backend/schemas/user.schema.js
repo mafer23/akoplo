@@ -13,7 +13,7 @@ const createUserSchema = Joi.object({
 
 const updateUserSchema = Joi.object({
   email: email,
-  typeUser: typeUser,
+  typeUser: typeUser
 });
 
 const getUserSchema = Joi.object({
