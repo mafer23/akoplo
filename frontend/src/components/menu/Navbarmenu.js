@@ -63,7 +63,7 @@ const Navbarmenu = () => {
                         <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> 
                     </li>
                     <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/MyAccount`}> Mi cuenta </NavLink> </li>
-                    
+                    <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Register`}> Registro </NavLink> </li>
                     <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contacto </NavLink> </li>
 
                     </ul>

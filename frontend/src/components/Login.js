@@ -1,4 +1,6 @@
 import React from 'react';
+import Ico from "./img/icono-akoplo-1.png";
+
 
 const Field = React.forwardRef(({label, type}, ref) => {
     return (
@@ -10,20 +12,21 @@ const Field = React.forwardRef(({label, type}, ref) => {
 });
 
 const Form = ({onSubmit}) => {
-    const usernameRef = React.useRef();
+    const useremailRef = React.useRef();
     const passwordRef = React.useRef();
     const handleSubmit = e => {
         e.preventDefault();
         const data = {
-            username: usernameRef.current.value,
+            useremail: useremailRef.current.value,
             password: passwordRef.current.value
         };
         onSubmit(data);
     };
     return (
       <form className='login' onSubmit={handleSubmit} >
-        <h2>Login</h2>
-        <input placeholder="Nombre de usuario" className='etiquet' ref={usernameRef} label="Username:" type="text"  />
+        
+        <h2><img className='imgLogin' src={Ico}/>Login</h2>
+        <input placeholder="Email" className='etiquet' ref={useremailRef} label="Useremail:" type="text"  />
         <input placeholder="Contraseña" className='etiquet' ref={passwordRef} label="Password:" type="password" />
         <div>
           <button  type="submit">Iniciar sesión</button>
