@@ -3,7 +3,8 @@ import React from "react";
 
 function Botton (props) {
     return (
-        <button className="btn" >Registrarme</button>
+        <a href= '/Register'>
+        <button className="btn" >Registrarme</button></a>
     )
 }
 

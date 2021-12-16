@@ -53,6 +53,6 @@ export const data = {
   ],
 };
 
-export function Data1() {
+export function Data2() {
   return <Bar options={options} data={data} />;
 }
